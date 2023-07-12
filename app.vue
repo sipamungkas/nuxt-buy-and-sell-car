@@ -6,24 +6,68 @@
     </header>
     <!-- END NAVBAR -->
 
-    <!-- START HOME HERO -->
-    <div class="relative h-screen w-100 bg-no-repeat bg-cover bg-bottom bg-[url('/assets/img/hero-bg-image.jpg')]">
-      <div class="z-10 absolute w-full h-full flex flex-col justify-center items-center">
-        <div class="text-center w-1/2">
-          <h1 class="text-8xl font-serif mb-10 text-white">Find your Car</h1>
+
+    <!-- START CARS LIST PAGE -->
+    <div class="mx-auto mt-4 max-w-7xl space-y-4 px-4 xs:px-8 sm:px-10 lg:px-16 pb-16 w-3/5">
+      <div class="mt-32 flex">
+        <!-- START CAR LIST SIDEBAR -->
+        <div class="shadow border w-64 mr-10 z-30 h-[190px]">
+          <div class="p-5 flex justify-between relative cursor-pointer border-b">
+            <h3>Location</h3>
+            <h3 class="text-blue-400 capitalize">Jakarta</h3>
+            <!-- <div class="absolute border shadow left-56 p-5 top-1 -m-1 bg-white">
+              <input type="text" class="border p-1 rounded ">
+              <button class="bg-blue-400 w-full mt-2 rounded text-white p-1">Apply</button>
+            </div> -->
+          </div>
+
+          <div class="p-5 flex justify-between relative cursor-pointer border-b">
+            <h3>Merk</h3>
+            <h3 class="text-blue-400 capitalize">Any</h3>
+            <!-- <div class="absolute border shadow left-56 p-5 top-1 -m-1 bg-white">
+              <input type="text" class="border p-1 rounded ">
+              <button class="bg-blue-400 w-full mt-2 rounded text-white p-1">Apply</button>
+            </div> -->
+          </div>
+
+          <div class="p-5 flex justify-between relative cursor-pointer border-b">
+            <h3>Price</h3>
+            <h3 class="text-blue-400 capitalize">Any</h3>
+            <!-- <div class="absolute border shadow left-56 p-5 top-1 -m-1 bg-white">
+              <input type="text" class="border p-1 rounded ">
+              <button class="bg-blue-400 w-full mt-2 rounded text-white p-1">Apply</button>
+            </div> -->
+          </div>
         </div>
-        <!-- START HOME SEARCHBAR -->
-        <div
-          class="font-serif w-full md:w-[1000px] rounded-full bg-white flex flex-row justify-between overflow-hidden drop-shadow-2xl mx-auto">
-          <input type="text" name="" id="" placeholder="Search by city..."
-            class="py-3 px-5 w-full text-2xl rounded-full focus:outline-none">
-          <button class="bg-sky-500 px-10 text-white font-normal">Search</button>
+
+        <!-- END CAR LIST SIDEBAR -->
+
+        <!-- START CAR LIST ITEM -->
+
+        <div class="shadow border w-full overflow-hidden mb-5 cursor-pointer h-[200px]">
+          <div class="flex h-full">
+            <img src="/assets/img/audi-car.jpg" alt="car" class="w-[300px] h-full object-cover">
+            <div class="p-4 flex flex-col">
+              <div class="pr-2">
+                <h1 class="text-2xl text-blue-700">Audi Car</h1>
+                <div class="w-[90%]">
+                  <p
+                    class="text-gray-900 overflow-hidden text-ellipsis whitespace-nowrap w-48 lg:w-56 2xl:w-full 2xl:whitespace-normal 2xl:overflow-visible ">
+                    Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit.
+                    Iusto nostrum labore
+                  </p>
+                </div>
+                <h2 class="mt-auto text-xl">IDR 257 Juta</h2>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- START HOME SEARCHBAR -->
+        <!-- END CAR LIST ITEM -->
+
       </div>
-      <div class="z-1 absolute w-full h-full bg-black opacity-50"></div>
     </div>
 
-    <!-- END HOME HERO -->
+    <!-- END CARS LIST PAGE -->
   </div>
 </template>
