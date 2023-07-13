@@ -1,73 +1,10 @@
 <template>
   <div>
     <!-- START NAVBAR -->
-    <header class="sticky top-0 z-50 flex justify-between items-center space-x-1 border-b bg-white p-4 shadow-md">
-      <a class="text-3xl font-mono" href="/"> Cartrader </a>
-    </header>
+    <!-- <Navbar /> -->
     <!-- END NAVBAR -->
+    <NuxtPage />
 
 
-    <!-- START CARS LIST PAGE -->
-    <div class="mx-auto mt-4 max-w-7xl space-y-4 px-4 xs:px-8 sm:px-10 lg:px-16 pb-16 w-3/5">
-      <div class="mt-32 flex">
-        <!-- START CAR LIST SIDEBAR -->
-        <div class="shadow border w-64 mr-10 z-30 h-[190px]">
-          <div class="p-5 flex justify-between relative cursor-pointer border-b">
-            <h3>Location</h3>
-            <h3 class="text-blue-400 capitalize">Jakarta</h3>
-            <!-- <div class="absolute border shadow left-56 p-5 top-1 -m-1 bg-white">
-              <input type="text" class="border p-1 rounded ">
-              <button class="bg-blue-400 w-full mt-2 rounded text-white p-1">Apply</button>
-            </div> -->
-          </div>
-
-          <div class="p-5 flex justify-between relative cursor-pointer border-b">
-            <h3>Merk</h3>
-            <h3 class="text-blue-400 capitalize">Any</h3>
-            <!-- <div class="absolute border shadow left-56 p-5 top-1 -m-1 bg-white">
-              <input type="text" class="border p-1 rounded ">
-              <button class="bg-blue-400 w-full mt-2 rounded text-white p-1">Apply</button>
-            </div> -->
-          </div>
-
-          <div class="p-5 flex justify-between relative cursor-pointer border-b">
-            <h3>Price</h3>
-            <h3 class="text-blue-400 capitalize">Any</h3>
-            <!-- <div class="absolute border shadow left-56 p-5 top-1 -m-1 bg-white">
-              <input type="text" class="border p-1 rounded ">
-              <button class="bg-blue-400 w-full mt-2 rounded text-white p-1">Apply</button>
-            </div> -->
-          </div>
-        </div>
-
-        <!-- END CAR LIST SIDEBAR -->
-
-        <!-- START CAR LIST ITEM -->
-
-        <div class="shadow border w-full overflow-hidden mb-5 cursor-pointer h-[200px]">
-          <div class="flex h-full">
-            <img src="/assets/img/audi-car.jpg" alt="car" class="w-[300px] h-full object-cover">
-            <div class="p-4 flex flex-col">
-              <div class="pr-2">
-                <h1 class="text-2xl text-blue-700">Audi Car</h1>
-                <div class="w-[90%]">
-                  <p
-                    class="text-gray-900 overflow-hidden text-ellipsis whitespace-nowrap w-48 lg:w-56 2xl:w-full 2xl:whitespace-normal 2xl:overflow-visible ">
-                    Lorem ipsum dolor, sit amet
-                    consectetur adipisicing elit.
-                    Iusto nostrum labore
-                  </p>
-                </div>
-                <h2 class="mt-auto text-xl">IDR 257 Juta</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END CAR LIST ITEM -->
-
-      </div>
-    </div>
-
-    <!-- END CARS LIST PAGE -->
   </div>
 </template>

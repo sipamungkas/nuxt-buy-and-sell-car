@@ -1,0 +1,25 @@
+<template>
+    <div class="mt-5">
+        <p class="mb-10">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+            consequuntur, et saepe sequi, ipsum quisquam iste autem quas vel aperiam
+            laboriosam dolorum vero tempore placeat, asperiores alias magni. Nulla,
+            dolores.
+        </p>
+    </div>
+    <!-- CAR DESCRISPTION -->
+    <!-- CAR CONTACT -->
+    <div class="mt-10">
+        <div class="flex w-[600px] justify-between">
+            <input type="text" class="border p-1" placeholder="Name" />
+            <input type="text" class="border p-1" placeholder="Email" />
+            <input type="text" class="border p-1" placeholder="Phone" />
+        </div>
+        <div class="flex mt-4 w-[600px]">
+            <textarea class="border p-1 w-full" placeholder="Message"></textarea>
+        </div>
+        <button class="bg-blue-400 text-white px-10 py-3 rounded mt-4">
+            Submit
+        </button>
+    </div>
+</template>
