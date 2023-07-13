@@ -1,3 +1,5 @@
+
+
 <template>
     <div class="relative h-screen w-100 bg-no-repeat bg-cover bg-bottom bg-[url('/assets/img/hero-bg-image.jpg')]">
         <div class="z-10 absolute w-full h-full flex flex-col justify-center items-center">

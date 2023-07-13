@@ -1,5 +1,5 @@
 <template>
     <div>
-        <CarCarList />
+        <CarList />
     </div>
 </template>

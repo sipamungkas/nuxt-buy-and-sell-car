@@ -4,6 +4,6 @@ const { cars } = useCars()
 
 <template>
     <div class="w-full">
-        <CarCarItem v-for="car in cars" :key="car.id" :car="car" />
+        <CarItem v-for="car in cars" :key="car.id" :car="car" />
     </div>
 </template>
