@@ -1,10 +1,7 @@
 <template>
   <div>
-    <!-- START NAVBAR -->
-    <!-- <Navbar /> -->
-    <!-- END NAVBAR -->
-    <NuxtPage />
-
-
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
