@@ -1,7 +1,9 @@
+<script setup>
+const { cars } = useCars()
+</script>
+
 <template>
     <div class="w-full">
-        <!-- CAR CARD -->
-        <CarCarItem />
-        <!-- CAR CARD -->
+        <CarCarItem v-for="car in cars" :key="car.id" :car="car" />
     </div>
 </template>
