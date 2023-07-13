@@ -18,7 +18,7 @@ const props = defineProps({
                         {{ car.description }}
                     </p>
                 </div>
-                <h1 class="mt-auto text-xl">{{ car.price }}</h1>
+                <h1 class="mt-auto text-xl">IDR {{ car.price }} Juta</h1>
             </div>
         </div>
     </div>
