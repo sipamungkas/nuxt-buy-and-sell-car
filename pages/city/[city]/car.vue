@@ -1,18 +1,11 @@
 <script setup>
 const route = useRoute()
 const { make, city } = route.params
+const { toTitleCase } = useUtilities()
+
 useHead({
     title: `Buy ${toTitleCase(make)} Car in ${toTitleCase(city)}`
 })
-
-function toTitleCase(str) {
-    return str.replace(
-        /\w\S*/g,
-        function (txt) {
-            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        }
-    );
-}
 
 definePageMeta({
     layout: 'custom'
