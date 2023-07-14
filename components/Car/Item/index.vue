@@ -17,7 +17,7 @@ const emit = defineEmits(['favor'])
             <img @click="emit('favor', car.id)" :src="favored ? heartFilled : heartOutline"
                 class="absolute w-7 right-5 top-2 z-20" alt="">
             <template #fallback>
-                <img :src="heartOutline" class="absolute w-7 right-5 top-2 z-20" alt="">
+                <img @click="emit('favor', car.id)" :src="heartOutline" class="absolute w-7 right-5 top-2 z-20" alt="">
             </template>
         </ClientOnly>
         <div class="flex h-full" @click="navigateTo(`/car/${car.name}-${car.id}`)">
