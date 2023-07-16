@@ -1,13 +1,17 @@
 <script setup>
+const router = useRouter()
 definePageMeta({
     layout: 'custom'
 })
 
-const supabase = useSupabaseClient();
+const supabase = useSupabaseAuthClient();
 
 const login = async () => {
-    const { error } = supabase.auth.signInWithOAuth({ provider: 'google' })
+    const { error, } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+    })
     if (error) { console.log(error) }
+    router.push('/profile/listings')
 }
 
 </script>
