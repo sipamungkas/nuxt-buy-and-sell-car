@@ -22,6 +22,8 @@ const schema = Joi.object().keys({
 });
 
 export default defineEventHandler(async (event) => {
+  // const headerAuthorization = getHeader(event, "authorization");
+  // const jwtToken = headerAuthorization?.split(" ")[1];
   const body = await readBody(event);
 
   const { error, value } = await schema.validate(body);
@@ -65,5 +67,4 @@ export default defineEventHandler(async (event) => {
     },
   });
   return car;
-  // return { value, error };
 });
