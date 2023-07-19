@@ -5,6 +5,7 @@ definePageMeta({
 
 const { makes } = useCars();
 const user = useSupabaseUser()
+const supabase = useSupabaseClient()
 
 const info = useState("adInfo", () => {
   return {
@@ -17,7 +18,7 @@ const info = useState("adInfo", () => {
     seats: "",
     features: "",
     description: "",
-    image: 'https://www.carhelpcanada.com/wp-content/uploads/2019/12/2020-Range-Rover-Evoque-2.jpg',
+    image: null,
   };
 });
 const errorMessage = ref("")
@@ -81,6 +82,14 @@ const isButtonDisabled = computed(() => {
 })
 
 const handleSubmit = async () => {
+  const fileName = `${Math.floor(Math.random() * (10 ^ 9))}-${new Date()}`
+  const { data, error } = await supabase.storage.from('images').upload('public/' + fileName, info.value.image)
+  console.log({ dataImage: data, error })
+
+  if (error) {
+    return errorMessage.value = "Failed to upload image" + error?.message
+  }
+
   const body = {
     ...info.value,
     features: info.value.features.split(', '),
@@ -88,8 +97,8 @@ const handleSubmit = async () => {
     year: parseInt(info.value.year),
     miles: parseInt(info.value.miles),
     price: parseInt(info.value.price),
-    name: `${info.value.name} - ${info.value.model}`,
-    image: 'https://www.carhelpcanada.com/wp-content/uploads/2019/12/2020-Range-Rover-Evoque-2.jpg',
+    name: `${info.value.make} ${info.value.model}`,
+    image: data.path,
     listerId: user.value.id
   }
 
@@ -103,6 +112,7 @@ const handleSubmit = async () => {
     navigateTo('/profile/listings')
   } catch (error) {
     errorMessage.value = error.statusMessage
+    await supabase.storage.from('images').remove(data.path)
   }
 
 }
