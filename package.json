@@ -18,6 +18,9 @@
     "nuxt": "^3.6.2"
   },
   "dependencies": {
-    "@vueuse/nuxt": "^10.2.1"
+    "@prisma/client": "^5.0.0",
+    "@vueuse/nuxt": "^10.2.1",
+    "joi": "^17.9.2",
+    "prisma": "^5.0.0"
   }
 }
