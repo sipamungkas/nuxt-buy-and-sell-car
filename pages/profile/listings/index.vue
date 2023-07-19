@@ -4,7 +4,17 @@ definePageMeta({
 
 });
 
-const { listings } = useCars();
+const user = useSupabaseUser()
+
+const { data: listings, refresh } = await useFetch(`/api/cars/listings/users/${user.value.id}`)
+
+const handleDelete = async (id) => {
+  await useFetch(`/api/cars/listings/${id}`, {
+    method: 'delete'
+  })
+  refresh()
+}
+
 </script>
 
 <template>
@@ -16,7 +26,7 @@ const { listings } = useCars();
         ">+</NuxtLink>
     </div>
     <div class="shadow rounded p-3 mt-5">
-      <CarListing v-for="listing in listings" :key="listing.id" :listing="listing" />
+      <CarListing v-for="listing in listings" :key="listing.id" :listing="listing" @delete-click="handleDelete" />
     </div>
   </div>
 </template>
